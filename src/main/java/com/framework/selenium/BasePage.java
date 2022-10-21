@@ -87,6 +87,7 @@ public abstract class BasePage {
         driver = new ChromeDriver(options);*/
     	ChromeOptions options = new ChromeOptions();
     	options.addArguments("--headless");
+	    options.addArguments("window-size=1200x600");
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
@@ -105,7 +106,7 @@ public abstract class BasePage {
             orderID = orderID != null ? orderID : new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-            FileUtils.copyFile(src, new File("C:\\Users\\ImportOrder\\Log\\" + orderID + ".png")); // System.currentTimeMillis()
+            FileUtils.copyFile(src, new File("/var/jenkins_home/workspace/ImportOrder/src/main/resources/screeenShot/" + orderID + ".png")); // System.currentTimeMillis()
         }
         catch (Exception e) {
             logger.info("Screenshot failed " + e.getLocalizedMessage());
