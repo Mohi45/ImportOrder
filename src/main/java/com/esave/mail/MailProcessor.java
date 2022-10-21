@@ -12,6 +12,7 @@ import com.sun.mail.imap.IMAPFolder;
 import com.sun.mail.imap.IMAPSSLStore;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.junit.Test;
 
 import javax.mail.*;
 import javax.mail.internet.MimeBodyPart;
@@ -81,7 +82,7 @@ public class MailProcessor {
      * @throws Exception
      */
     public static void main(String[] args) {
-
+        findPath();
         PropertiesManager.purveyorPropertiesFile = DEFAULT_PURVEYOR_PROPERTIES;
         PropertiesManager.locationPropertiesFile = DEFAULT_LOCATION_PROPERTIES;
 
@@ -610,5 +611,9 @@ public class MailProcessor {
         messageContent = responseBuffer.toString();
         return messageContent;
     }
+public static void findPath(){
+        File file=new File("location.properties");
+    System.out.println("Absolute path: " + file.getAbsolutePath());
+}
 
 }
