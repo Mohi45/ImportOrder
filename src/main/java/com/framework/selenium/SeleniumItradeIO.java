@@ -25,7 +25,7 @@ public class SeleniumItradeIO extends CommonCheneyIO {
 		String userName = orderDetails.getUserName();
 		String password = orderDetails.getPassword();
 		String orderID = orderDetails.getOrderId();
-		String filepath = System.getProperty("user.dir")+"\\src\\main\\resources\\orders\\";//"C:\\orders\\";
+		String filepath = "\\src\\main\\resources\\orders\\";//"C:\\orders\\";
 		String date = orderDetails.getDeliverydate();
 		// Actual File path ##
 		String filename = filepath + orderID + ".csv";
