@@ -34,8 +34,8 @@ public class MailProcessor {
     private static final String DEFAULT_PURVEYOR_PROPERTIES = "purveyor.properties";
     private static final String DEFAULT_LOCATION_PROPERTIES = "/var/jenkins_home/workspace/ImportOrder/src/main/resources/location.properties";//"\\src\\main\\resources\\location.properties";
     private static final String DEFAULT_PURVEYOR_ID = "1308";
-    private static final String USER_EMAIL = "testprav59@gmail.com";//"importorders.diningedge@gmail.com";
-    private static final String USER_PASSWORD = "telzcaoavpskmzpn";//"kiwfakjksprtnpsx";
+    private static final String USER_EMAIL = "importorders.diningedge@gmail.com";
+    private static final String USER_PASSWORD = "kiwfakjksprtnpsx";
     private static String AC_NUM = "";
 
     private boolean isCheneyCentral = false;
