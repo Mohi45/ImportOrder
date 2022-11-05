@@ -30,9 +30,9 @@ import java.util.*;
 //"telzcaoavpskmzpn";
 public class MailProcessor {
 
-    private static final String DEFAUT_ATTACHMET_DIR = "/var/jenkins_home/workspace/ImportOrder/src/main/resources/orders";//"src\\main\\resources\\orders";
+    private static final String DEFAUT_ATTACHMET_DIR = "/var/jenkins_home/workspace/CheneyItradeImportOrder/src/main/resources/orders";//"src\\main\\resources\\orders";
     private static final String DEFAULT_PURVEYOR_PROPERTIES = "purveyor.properties";
-    private static final String DEFAULT_LOCATION_PROPERTIES = "/var/jenkins_home/workspace/ImportOrder/src/main/resources/location.properties";//"\\src\\main\\resources\\location.properties";
+    private static final String DEFAULT_LOCATION_PROPERTIES = "/var/jenkins_home/workspace/CheneyItradeImportOrder/src/main/resources/location.properties";//"\\src\\main\\resources\\location.properties";
     private static final String DEFAULT_PURVEYOR_ID = "1308";
     private static final String USER_EMAIL = "importorders.diningedge@gmail.com";
     private static final String USER_PASSWORD = "kiwfakjksprtnpsx";
