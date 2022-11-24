@@ -429,8 +429,8 @@ public class CommonCheneyIO extends BasePage {
 	public void enterDeliverydate(WebDriver driver, String date) {
 		try {
 			if (date!=null) {
-				String mm = date.substring(0, 2);
-				String dd = date.substring(3, 5);
+				String dd = date.substring(0, 2);
+				String mm = date.substring(3, 5);
 				if (dd.charAt(0) == '0') {
 					dd = dd.substring(1);
 				}
