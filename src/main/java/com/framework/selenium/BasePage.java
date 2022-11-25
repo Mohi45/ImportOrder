@@ -40,7 +40,6 @@ public abstract class BasePage {
             logger.info("Alert pop up accepted - Items added to cart");
             return false;
         } catch (Exception e) {
-            e.printStackTrace();
             logger.error("Browser Alert not present");
             return true;
         }

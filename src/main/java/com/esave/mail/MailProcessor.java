@@ -23,9 +23,13 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 //"testprav59@gmail.com";
 //"telzcaoavpskmzpn";
 public class MailProcessor {
@@ -433,7 +437,7 @@ public class MailProcessor {
         HashMap<String, String> parsedMap = new HashMap<>();
         messageContent = messageContent.replaceAll("<[^>]*>", "");
         int start = messageContent.indexOf("Purveyor:");
-        int end = messageContent.indexOf("2022'") + "2022'".length();
+        int end = messageContent.indexOf(regex(messageContent)) + regex(messageContent).length();
         messageContent = messageContent.substring(start, end).replaceAll(" ","");
 
         String purveyorId = messageContent.substring(messageContent.indexOf('(') + 1, messageContent.indexOf(')'));
@@ -615,5 +619,23 @@ public static void findPath(){
         File file=new File("location.properties");
     System.out.println("Absolute path: " + file.getAbsolutePath());
 }
+    public String tommorowDate(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE, +1);
+        return dateFormat.format(calendar.getTime()).toString().substring(8,10);
 
+    }
+
+    public String regex(String msg){
+        Pattern pattern = Pattern.compile("(-[0-9]{2}')");
+        Matcher matcher = pattern.matcher(msg);
+        if (matcher.find())
+        {
+            return matcher.group(1);
+        }else{
+            return tommorowDate();
+        }
+
+    }
 }
