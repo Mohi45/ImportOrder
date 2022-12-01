@@ -550,7 +550,7 @@ public class MailProcessor {
     private String updateDeliveryDateNv(String Ddate) {
         String dd;
         try {
-            date = df_nv.parse(Ddate);
+            date = df.parse(Ddate);
             dd = df1.format(date);
             logger.info("Delivery date for input : " + dd);
         } catch (ParseException e) {
