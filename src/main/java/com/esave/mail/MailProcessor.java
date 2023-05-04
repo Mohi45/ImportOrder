@@ -151,6 +151,7 @@ public class MailProcessor {
                         @Override
                         public boolean match(Message message) {
                             try {
+                                System.out.println("Subject :: "+message.getSubject());
                                 if (message.getSubject().contains("Order") || message.getSubject().contains("order")) {
                                     return true;
                                 }
